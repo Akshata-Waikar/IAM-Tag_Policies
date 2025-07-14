@@ -36,28 +36,7 @@ The objective of this project is to enforce mandatory tagging during EC2 instanc
 
 ### Step 1: Create IAM Policy
 
-Create a custom IAM policy with the following JSON to deny EC2 launches if required tags are missing:
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "DenyRunInstanceWithoutTags",
-      "Effect": "Deny",
-      "Action": "ec2:RunInstances",
-      "Resource": "*",
-      "Condition": {
-        "Null": {
-          "aws:RequestTag/Name": "true",
-          "aws:RequestTag/emailID": "true",
-          "aws:RequestTag/phoneNo": "true",
-          "aws:RequestTag/Place": "true"
-        }
-      }
-    }
-  ]
-}
+Create a custom IAM policy with the following JSON to deny EC2 launches if required tags are missing
 
 Step 2: Attach Policies to IAM User
 Attach:
