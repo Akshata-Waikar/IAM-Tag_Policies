@@ -21,7 +21,7 @@ The objective of this project is to enforce mandatory tagging during EC2 instanc
 
 ## 🧰 Technology Stack
 
-| Component          | Description                                                                 |
+| Component          | Description                                                                |
 |--------------------|-----------------------------------------------------------------------------|
 | AWS EC2            | Launch and manage virtual servers.                                          |
 | AWS IAM            | Manage users and enforce tagging with custom policies.                      |
